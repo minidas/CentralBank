@@ -1,6 +1,6 @@
 building_bank = {
 	building_group = bg_private_infrastructure
-	# icon = "gfx/interface/icons/building_icons/building_railway.dds"
+	icon = "gfx/interface/icons/building_icons/building_railway.dds"
 
 	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
 
@@ -72,5 +72,5 @@ building_bank = {
 	}
 	ownership_type = self
 
-	# background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
 }
