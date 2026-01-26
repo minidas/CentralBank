@@ -1,4 +1,4 @@
-texticon = {
+﻿texticon = {
 	icon = bond
 	iconsize = {
 		texture = gfx/interface/icons/goods_icons/bond.dds

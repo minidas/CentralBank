@@ -1,5 +1,5 @@
-pm_basic_loans = {
-	texture = "None"
+﻿pm_basic_loans = {
+	texture = "gfx/interface/icons/production_method_icons/building_panel_bg_monuments.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
