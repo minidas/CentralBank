@@ -1,4 +1,4 @@
-goods_input_bond_add = {
+﻿goods_input_bond_add = {
 	decimals=1
 	color=bad
 	game_data={
