@@ -1,0 +1,15 @@
+pm_basic_loans = {
+	texture = "None"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5 # 300
+			goods_output_bond_add = 10 # 500
+		}
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_clerks_add = 200
+			building_employment_bureaucrats_add = 100
+		}
+	}
+}

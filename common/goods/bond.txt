@@ -1,0 +1,5 @@
+bond = {
+	texture = "gfx/interface/icons/goods_icons/bond.dds"
+	cost = 30
+	category = staple
+}

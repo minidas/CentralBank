@@ -1,0 +1,9 @@
+texticon = {
+	icon = bond
+	iconsize = {
+		texture = gfx/interface/icons/goods_icons/bond.dds
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
