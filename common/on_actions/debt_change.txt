@@ -1,0 +1,35 @@
+on_weekly_pulse_country = {
+	on_actions = {
+		debt_change_progress_bar_update
+	}
+}
+on_half_yearly_pulse_country = {
+	on_actions = {
+		gdp_record
+	}
+}
+debt_change_progress_bar_update = {
+	effect = {
+		change_variable = {
+			name = total_debt
+			multiply = {
+				value = real_interest_rate
+				divide = 52
+				add = 1
+			}
+		}
+
+	}
+}
+gdp_record = {
+	effect = {
+		set_variable = {
+			name = last_season_gdp # actually the last half-year's gdp
+			value = var:this_season_gdp
+		}
+		set_variable = {
+			name = this_season_gdp
+			value = gdp
+		}
+	}
+}

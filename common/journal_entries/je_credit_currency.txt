@@ -1,0 +1,29 @@
+je_credit_currency = {
+	group = je_group_internal_affairs
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	scripted_progress_bar = debt_amount_progress_bar
+
+	immediate = {
+		set_variable = {
+			name = bank_reverses
+			value = 0
+		}
+		set_variable = {
+			name = total_debt
+			value = 0
+		}
+		set_variable = {
+			name = leverage_target
+			value = 0
+		}
+		set_variable = {
+			name = turnover_amount
+			value = 0
+		}
+		set_variable = {
+			name = this_season_gdp
+			value = gdp
+		}
+	}
+}

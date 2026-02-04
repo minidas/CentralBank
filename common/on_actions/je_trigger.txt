@@ -1,0 +1,12 @@
+on_game_started = {
+	on_actions = {
+		new_je_credit_currency
+	}
+}
+new_je_credit_currency = {
+	effect={
+		add_journal_entry = {
+			type = je_credit_currency
+		}
+	}
+}

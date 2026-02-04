@@ -1,0 +1,42 @@
+debt_bound = {
+	value = bank_reserves
+	divide = var:reserves_rate
+	add = 0.1 # to avoid division by zero
+}
+
+leverage_rate = {
+	value = total_debt
+	divide = debt_bound
+}
+
+risk_premium_factor = {
+	value = 4
+	subtract = {
+		desc = "credit_level_modifier"
+		value = credit_level
+	}
+	pow = leverage_rate
+}
+
+real_interest_rate = {
+	value = 0.04
+	multiply = bank_interest_rate_factor
+	multiply = risk_premium_factor
+	multiply = net_export_factor
+}
+
+interest_rate_target = {
+	value = 4
+	subtract = {
+		desc = "credit_level_modifier"
+		value = credit_level
+	}
+	pow = var:leverage_target
+}
+
+gdp_growth_rate = {
+	value = var:this_season_gdp
+	subtract = var:last_season_gdp
+	divide = var:last_season_gdp
+	multiply = 2 # to annualize from half-yearly data
+}

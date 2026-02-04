@@ -1,0 +1,13 @@
+debt_amount_progress_bar = {
+	name = "debt_amount_progress_bar"
+ 	desc = "debt_amount_progress_bar_desc"
+
+ 	default = yes
+	weekly_progress = {
+		value = leverage_rate
+	}
+	
+	start_value = 0
+	min_value = 0
+	max_value = 1
+}
