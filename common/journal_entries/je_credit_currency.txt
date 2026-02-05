@@ -25,5 +25,18 @@ je_credit_currency = {
 			name = this_season_gdp
 			value = gdp
 		}
+		set_variable = {
+			name = last_season_gdp
+			value = gdp
+		}
+		set_variable = {
+			name = confidence_factor
+			value = 1
+		}
+		#for test
+		set_variable = {
+			name = reverses_rate
+			value = 0.1
+		}
 	}
 }

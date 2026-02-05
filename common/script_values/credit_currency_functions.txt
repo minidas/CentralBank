@@ -25,13 +25,19 @@ real_interest_rate = {
 	multiply = net_export_factor
 }
 
-interest_rate_target = {
+leverage_target = {
+	value = var:target_debt_change
+	add = var:total_debt
+	divide = debt_bound
+}
+
+target_interest_rate = {
 	value = 4
 	subtract = {
 		desc = "credit_level_modifier"
 		value = credit_level
 	}
-	pow = var:leverage_target
+	pow = leverage_target
 }
 
 gdp_growth_rate = {
@@ -39,4 +45,22 @@ gdp_growth_rate = {
 	subtract = var:last_season_gdp
 	divide = var:last_season_gdp
 	multiply = 2 # to annualize from half-yearly data
+	multiply = var:confidence_factor
+}
+
+
+
+debt_change = {
+	if = {
+		limit = {
+			leverage_rate > var:leverage_target
+		}
+		value = var:leverage_target
+		subtract = leverage_rate
+		multiply = debt_bound
+		max = investment
+	}
+	else = {
+		value = var:turnover_amount
+	}
 }

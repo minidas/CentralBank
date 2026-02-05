@@ -1,0 +1,13 @@
+recursive_loan_calculator = {
+	if = {
+		limit ={
+			target_interest_rate < gdp_growth_rate
+			target_debt_change > 1000
+		}
+		change_variable = {
+			name = target_debt_change
+			divide = 2
+		}
+		recursive_loan_calculator = yes
+	}
+}
