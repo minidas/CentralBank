@@ -1,13 +1,31 @@
 ﻿recursive_loan_calculator = {
 	if = {
-		limit ={
-			target_interest_rate < gdp_growth_rate
-			var:target_debt_change > 1000
+		limit = { real_interest_rate < gdp_growth_rate }
+	
+		if = {
+			limit ={
+				target_interest_rate < gdp_growth_rate
+				var:target_debt_change > 1000
+			}
+			change_variable = {
+				name = target_debt_change
+				divide = 2
+			}
+			recursive_loan_calculator = yes
 		}
-		change_variable = {
-			name = target_debt_change
-			divide = 2
+	}
+	else = {
+		if = {
+			limit = {
+				target_interest_rate < gdp_growth_rate
+				var:target_debt_change > 1000
+			}
+			change_variable = {
+				name = target_debt_change
+				multiply = 0.8
+			}
+			recursive_loan_calculator = yes
 		}
-		recursive_loan_calculator = yes
+		
 	}
 }

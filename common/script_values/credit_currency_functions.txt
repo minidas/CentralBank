@@ -6,7 +6,7 @@
 
 leverage_rate = {
 	value = total_debt
-	divide = debt_bound
+	divide = gdp
 }
 
 risk_premium_factor = {
@@ -32,11 +32,8 @@ leverage_target = {
 }
 
 target_interest_rate = {
-	value = 4
-	subtract = {
-		desc = "credit_level_modifier"
-		value = credit_level
-	}
+	value = 0.04
+	subtract = credit_level
 	pow = leverage_target
 }
 
@@ -49,16 +46,14 @@ gdp_growth_rate = {
 }
 
 
-
+# value before recursive calculation
 debt_change = {
 	if = {
 		limit = {
-			leverage_rate > var:leverage_target
+			real_interest_rate > gdp_growth_rate
 		}
-		value = var:leverage_target
-		subtract = leverage_rate
-		multiply = debt_bound
-		max = investment
+		value = 0
+		subtract = investment
 	}
 	else = {
 		value = var:turnover_amount
