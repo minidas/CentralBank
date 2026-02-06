@@ -28,4 +28,16 @@
 		}
 		
 	}
+	if = {
+		limit = {
+			target_debt > debt_bound 
+		}
+		set_variable = {
+			name = target_debt_change
+			value = {
+				value = debt_bound
+				subtract = var:total_debt
+			}
+		}
+	}
 }

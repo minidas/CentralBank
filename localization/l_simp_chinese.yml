@@ -8,3 +8,5 @@
  debt_amount_progress_bar: "债务总额"
  debt_amount_progress_bar_desc: "当前债务总额"
  credit_level_modifier: "信用水平修正"
+ broke_progress_bar: "破产进度" 
+ broke_progress_bar_desc: "每周投资池毛收入无法偿还利息时，破产进度增加1。"

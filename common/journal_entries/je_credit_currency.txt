@@ -4,6 +4,7 @@
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	scripted_progress_bar = debt_amount_progress_bar
+	scripted_progress_bar = broke_progress_bar
 
 	is_shown_when_inactive = {
 		always = yes
@@ -62,11 +63,7 @@
 		effect = {
 			change_variable = {
 				name = total_debt
-				multiply = {
-					value = real_interest_rate
-					divide = 52
-					add = 1
-				}
+				add = weekly_interest
 			}
 			set_variable = {
 				name = target_debt_change

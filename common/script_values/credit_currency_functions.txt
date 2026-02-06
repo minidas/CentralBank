@@ -56,6 +56,18 @@ gdp_growth_rate = {
 	multiply = var:confidence_factor
 }
 
+target_debt = {
+	value = var:total_debt
+	add = var:target_debt_change
+}
+
+weekly_interest = {
+	value = var:total_debt
+	multiply = {
+		value = real_interest_rate
+		divide = 52
+	}
+}
 
 # value before recursive calculation
 debt_change = {
