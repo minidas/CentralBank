@@ -4,7 +4,7 @@
 	
 		if = {
 			limit ={
-				target_interest_rate < gdp_growth_rate
+				target_interest_rate > gdp_growth_rate
 				var:target_debt_change > 1000
 			}
 			change_variable = {
@@ -18,11 +18,11 @@
 		if = {
 			limit = {
 				target_interest_rate < gdp_growth_rate
-				var:target_debt_change > 1000
+				var:target_debt_change < -1000
 			}
 			change_variable = {
 				name = target_debt_change
-				multiply = 0.8
+				multiply = 0.5
 			}
 			recursive_loan_calculator = yes
 		}

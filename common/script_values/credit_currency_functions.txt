@@ -1,28 +1,32 @@
 ﻿debt_bound = {
-	value = bank_reserves
+	value = var:bank_reserves
 	divide = var:reserves_rate
 	add = 1 # to avoid division by zero
 }
 
 leverage_rate = {
-	value = total_debt
+	value = var:total_debt
 	divide = gdp
+}
+
+trade_deficit_factor = {
+	value = 1 # for test
 }
 
 risk_premium_factor = {
 	value = 4
 	subtract = {
 		desc = "credit_level_modifier"
-		value = credit_level
+		value = var:credit_level
 	}
 	pow = leverage_rate
 }
 
 real_interest_rate = {
 	value = 0.04
-	multiply = bank_interest_rate_factor
+	multiply = var:bank_interest_rate_factor
 	multiply = risk_premium_factor
-	multiply = net_export_factor
+	multiply = trade_deficit_factor
 }
 
 leverage_target = {
@@ -31,10 +35,17 @@ leverage_target = {
 	divide = debt_bound
 }
 
+target_risk_premium = {
+	value = 4
+	subtract = var:credit_level
+	pow = leverage_target
+}
+
 target_interest_rate = {
 	value = 0.04
-	subtract = credit_level
-	pow = leverage_target
+	multiply = var:bank_interest_rate_factor
+	multiply = target_risk_premium
+	multiply = trade_deficit_factor
 }
 
 gdp_growth_rate = {
@@ -52,8 +63,9 @@ debt_change = {
 		limit = {
 			real_interest_rate > gdp_growth_rate
 		}
-		value = 0
-		subtract = investment
+		value = investment_pool_gross_income
+		max = total_debt
+		multiply = -1
 	}
 	else = {
 		value = var:turnover_amount

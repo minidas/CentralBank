@@ -47,6 +47,15 @@
 			name = reserves_rate
 			value = 0.1
 		}
+		set_variable = {
+			name = credit_level
+			value = 0
+		}
+		set_variable = {
+			name = bank_interest_rate_factor
+			value = 1
+		}
+
 	}
 
 	on_weekly_pulse = {

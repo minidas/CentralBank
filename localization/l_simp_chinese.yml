@@ -7,3 +7,4 @@
  je_credit_currency_reason: "通过引入信用货币体系，银行提供贷款以促进经济发展。"
  debt_amount_progress_bar: "债务总额"
  debt_amount_progress_bar_desc: "当前债务总额"
+ credit_level_modifier: "信用水平修正"
