@@ -23,6 +23,9 @@ broke_progress_bar = {
 			}
 			add = 1
 		}
+		else = {
+			add = -1
+		}
 	}
 	
 	start_value = 0
