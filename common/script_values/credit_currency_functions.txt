@@ -1,4 +1,4 @@
-debt_bound = {
+﻿debt_bound = {
 	value = bank_reserves
 	divide = var:reserves_rate
 	add = 0.1 # to avoid division by zero

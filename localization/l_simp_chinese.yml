@@ -3,4 +3,7 @@
  pmg_base_building_bank: "基础银行"
  pm_basic_loans: "基础贷款"
  bond: "债券"
- 
+ je_credit_currency: "信用货币体系"
+ je_credit_currency_reason: "通过引入信用货币体系，银行提供贷款以促进经济发展。"
+ debt_amount_progress_bar: "债务总额"
+ debt_amount_progress_bar_desc: "当前债务总额"

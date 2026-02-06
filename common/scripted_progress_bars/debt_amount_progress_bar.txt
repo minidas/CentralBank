@@ -1,4 +1,4 @@
-debt_amount_progress_bar = {
+﻿debt_amount_progress_bar = {
 	name = "debt_amount_progress_bar"
  	desc = "debt_amount_progress_bar_desc"
 

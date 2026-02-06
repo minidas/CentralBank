@@ -1,27 +1,15 @@
-on_weekly_pulse_country = {
-	on_actions = {
-		debt_change_progress_bar_update
-		weekly_debt_increase
-	}
-}
+# on_weekly_pulse_country = {
+# 	on_actions = {
+# 		debt_change_progress_bar_update
+# 		weekly_debt_increase
+# 	}
+# }
 on_half_yearly_pulse_country = {
 	on_actions = {
 		gdp_record
 	}
 }
-debt_change_progress_bar_update = {
-	effect = {
-		change_variable = {
-			name = total_debt
-			multiply = {
-				value = real_interest_rate
-				divide = 52
-				add = 1
-			}
-		}
 
-	}
-}
 gdp_record = {
 	effect = {
 		set_variable = {
@@ -33,19 +21,4 @@ gdp_record = {
 			value = gdp
 		}
 	}
-}
-weekly_debt_increase = {
-	effect = {
-		set_variable = {
-			name = target_debt_change
-			value = debt_change
-		}
-		recursive_loan_calculator = yes
-		change_variable = {
-			name = total_debt
-			add = var:target_debt_change
-		}
-		add_investment_pool = var:target_debt_change
-	}
-
 }

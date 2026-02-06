@@ -1,12 +1,21 @@
-je_credit_currency = {
+﻿je_credit_currency = {
+	should_be_pinned_by_default = yes
 	group = je_group_internal_affairs
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	scripted_progress_bar = debt_amount_progress_bar
 
+	is_shown_when_inactive = {
+		always = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
 	immediate = {
 		set_variable = {
-			name = bank_reverses
+			name = bank_reserves
 			value = 0
 		}
 		set_variable = {
@@ -35,8 +44,31 @@ je_credit_currency = {
 		}
 		#for test
 		set_variable = {
-			name = reverses_rate
+			name = reserves_rate
 			value = 0.1
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			change_variable = {
+				name = total_debt
+				multiply = {
+					value = real_interest_rate
+					divide = 52
+					add = 1
+				}
+			}
+			set_variable = {
+				name = target_debt_change
+				value = debt_change
+			}
+			recursive_loan_calculator = yes
+			change_variable = {
+				name = total_debt
+				add = var:target_debt_change
+			}
+			add_investment_pool = var:target_debt_change
 		}
 	}
 }
