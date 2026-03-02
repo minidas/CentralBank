@@ -1,0 +1,39 @@
+country_bank_bond_025_add = {
+	decimals = 2
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_bank_bond_050_add = {
+	decimals = 2
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_bank_bond_100_add = {
+	decimals = 2
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_bank_bond_200_add = {
+	decimals = 2
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_bank_bond_300_add = {
+	decimals = 2
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}

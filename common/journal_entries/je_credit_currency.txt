@@ -1,4 +1,4 @@
-﻿je_credit_currency = {
+je_credit_currency = {
 	should_be_pinned_by_default = yes
 	group = je_group_internal_affairs
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
@@ -43,7 +43,7 @@
 			name = confidence_factor
 			value = 1
 		}
-		#for test
+		# for test
 		set_variable = {
 			name = reserves_rate
 			value = 0.1
@@ -56,11 +56,24 @@
 			name = bank_interest_rate_factor
 			value = 1
 		}
-
 	}
 
 	on_weekly_pulse = {
 		effect = {
+			# Refresh economy-facing variables from bond production mix.
+			set_variable = {
+				name = bank_interest_rate_factor
+				value = weighted_interest_factor
+			}
+			set_variable = {
+				name = bank_reserves
+				value = bank_reserves_from_bonds
+			}
+			set_variable = {
+				name = turnover_amount
+				value = turnover_from_bonds
+			}
+
 			change_variable = {
 				name = total_debt
 				add = weekly_interest

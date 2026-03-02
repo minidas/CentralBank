@@ -1,4 +1,73 @@
-﻿debt_bound = {
+# Country-owned bond quantities (read via modifier event_target)
+bond_025_supply = {
+	value = modifier:country_bank_bond_025_add
+}
+
+bond_050_supply = {
+	value = modifier:country_bank_bond_050_add
+}
+
+bond_100_supply = {
+	value = modifier:country_bank_bond_100_add
+}
+
+bond_200_supply = {
+	value = modifier:country_bank_bond_200_add
+}
+
+bond_300_supply = {
+	value = modifier:country_bank_bond_300_add
+}
+
+total_bank_bonds = {
+	value = bond_025_supply
+	add = bond_050_supply
+	add = bond_100_supply
+	add = bond_200_supply
+	add = bond_300_supply
+}
+
+weighted_interest_numerator = {
+	value = bond_025_supply
+	multiply = 0.25
+	add = {
+		value = bond_050_supply
+		multiply = 0.5
+	}
+	add = bond_100_supply
+	add = {
+		value = bond_200_supply
+		multiply = 2
+	}
+	add = {
+		value = bond_300_supply
+		multiply = 3
+	}
+}
+
+weighted_interest_factor = {
+	if = {
+		limit = { total_bank_bonds > 0 }
+		value = weighted_interest_numerator
+		divide = total_bank_bonds
+	}
+	else = {
+		value = 1
+	}
+}
+
+# These two links can be tuned directly for balance.
+bank_reserves_from_bonds = {
+	value = total_bank_bonds
+	multiply = 20
+}
+
+turnover_from_bonds = {
+	value = total_bank_bonds
+	multiply = 5
+}
+
+debt_bound = {
 	value = var:bank_reserves
 	divide = var:reserves_rate
 	add = 1 # to avoid division by zero

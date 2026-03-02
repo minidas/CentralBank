@@ -1,14 +1,55 @@
-﻿goods_input_bond_add = {
-	decimals=1
-	color=bad
-	game_data={
-		ai_value=0
+goods_input_bond_add = {
+	decimals = 1
+	color = bad
+	game_data = {
+		ai_value = 0
 	}
 }
+
 goods_output_bond_add = {
-	decimals=1
-	color=good
-	game_data={
-		ai_value=0
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_output_bond_025_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_output_bond_050_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_output_bond_100_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_output_bond_200_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_output_bond_300_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
 	}
 }

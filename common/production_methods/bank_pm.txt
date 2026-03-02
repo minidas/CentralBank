@@ -1,15 +1,104 @@
-﻿pm_basic_loans = {
+pm_loans_025 = {
 	texture = "gfx/interface/icons/production_method_icons/building_panel_bg_monuments.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5 # 300
-			goods_output_bond_add = 10 # 500
+			goods_input_paper_add = 5
+			goods_output_bond_025_add = 10
 		}
 		level_scaled = {
-			building_employment_laborers_add = 700
-			building_employment_clerks_add = 200
-			building_employment_bureaucrats_add = 100
+			building_employment_clerks_add = 800
+			building_employment_bureaucrats_add = 200
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bank_bond_025_add = 10
+		}
+	}
+}
+
+pm_loans_050 = {
+	texture = "gfx/interface/icons/production_method_icons/building_panel_bg_monuments.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_output_bond_050_add = 10
+		}
+		level_scaled = {
+			building_employment_clerks_add = 800
+			building_employment_bureaucrats_add = 200
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bank_bond_050_add = 10
+		}
+	}
+}
+
+pm_loans_100 = {
+	texture = "gfx/interface/icons/production_method_icons/building_panel_bg_monuments.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_output_bond_100_add = 10
+		}
+		level_scaled = {
+			building_employment_clerks_add = 800
+			building_employment_bureaucrats_add = 200
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bank_bond_100_add = 10
+		}
+	}
+}
+
+pm_loans_200 = {
+	texture = "gfx/interface/icons/production_method_icons/building_panel_bg_monuments.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_output_bond_200_add = 10
+		}
+		level_scaled = {
+			building_employment_clerks_add = 800
+			building_employment_bureaucrats_add = 200
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bank_bond_200_add = 10
+		}
+	}
+}
+
+pm_loans_300 = {
+	texture = "gfx/interface/icons/production_method_icons/building_panel_bg_monuments.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_output_bond_300_add = 10
+		}
+		level_scaled = {
+			building_employment_clerks_add = 800
+			building_employment_bureaucrats_add = 200
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bank_bond_300_add = 10
 		}
 	}
 }

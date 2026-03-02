@@ -1,5 +1,47 @@
-﻿bond = {
+bond = {
 	texture = "gfx/interface/icons/goods_icons/bond.dds"
 	cost = 30
 	category = staple
+	tradeable = no
+	fixed_price = yes
+}
+
+bond_025 = {
+	texture = "gfx/interface/icons/goods_icons/bond.dds"
+	cost = 30
+	category = staple
+	tradeable = no
+	fixed_price = yes
+}
+
+bond_050 = {
+	texture = "gfx/interface/icons/goods_icons/bond.dds"
+	cost = 30
+	category = staple
+	tradeable = no
+	fixed_price = yes
+}
+
+bond_100 = {
+	texture = "gfx/interface/icons/goods_icons/bond.dds"
+	cost = 30
+	category = staple
+	tradeable = no
+	fixed_price = yes
+}
+
+bond_200 = {
+	texture = "gfx/interface/icons/goods_icons/bond.dds"
+	cost = 30
+	category = staple
+	tradeable = no
+	fixed_price = yes
+}
+
+bond_300 = {
+	texture = "gfx/interface/icons/goods_icons/bond.dds"
+	cost = 30
+	category = staple
+	tradeable = no
+	fixed_price = yes
 }
