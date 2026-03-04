@@ -59,12 +59,12 @@ weighted_interest_factor = {
 # These two links can be tuned directly for balance.
 bank_reserves_from_bonds = {
 	value = total_bank_bonds
-	multiply = 20
+	multiply = 250
 }
 
 turnover_from_bonds = {
 	value = total_bank_bonds
-	multiply = 5
+	multiply = 100
 }
 
 debt_bound = {

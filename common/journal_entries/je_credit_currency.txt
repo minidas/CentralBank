@@ -56,6 +56,26 @@ je_credit_currency = {
 			name = bank_interest_rate_factor
 			value = 1
 		}
+		set_variable = {
+			name = cached_leverage_rate
+			value = 0
+		}
+		set_variable = {
+			name = cached_debt_bound
+			value = 0
+		}
+		set_variable = {
+			name = cached_risk_premium_factor
+			value = 1
+		}
+		set_variable = {
+			name = cached_trade_deficit_factor
+			value = 1
+		}
+		set_variable = {
+			name = cached_real_interest_rate
+			value = 0.04
+		}
 	}
 
 	on_weekly_pulse = {
@@ -72,6 +92,26 @@ je_credit_currency = {
 			set_variable = {
 				name = turnover_amount
 				value = turnover_from_bonds
+			}
+			set_variable = {
+				name = cached_leverage_rate
+				value = leverage_rate
+			}
+			set_variable = {
+				name = cached_debt_bound
+				value = debt_bound
+			}
+			set_variable = {
+				name = cached_risk_premium_factor
+				value = risk_premium_factor
+			}
+			set_variable = {
+				name = cached_trade_deficit_factor
+				value = trade_deficit_factor
+			}
+			set_variable = {
+				name = cached_real_interest_rate
+				value = real_interest_rate
 			}
 
 			change_variable = {
